@@ -7,8 +7,6 @@ import axios from 'axios';
 
 
   export const loginUser =  ({email,password}) => async(dispatch)=> {
-      console.log('login user',email,password);
-      
     dispatch({ type: "LOADING", payload: true });
       try {
         const response= await axios.post('https://freementor26.herokuapp.com/api/v2/auth/signin',{email,password});
@@ -21,7 +19,6 @@ localStorage.setItem('token', token);
         
       } catch (error) {    
         const errorMessage = error.response.data.error;
-        console.log('error',errorMessage);
         dispatch(loginError(errorMessage));
         dispatch({ type: "LOADING", payload: false });
       }
