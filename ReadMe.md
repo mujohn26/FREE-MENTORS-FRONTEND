@@ -1,5 +1,5 @@
 # FREE-MENTORS
-[![Build Status](https://travis-ci.org/mujohn26/FREE-MENTORS.svg?branch=develop)](https://travis-ci.org/mujohn26/FREE-MENTORS)  [![Coverage Status](https://coveralls.io/repos/github/mujohn26/FREE-MENTORS/badge.svg?branch=develop)](https://coveralls.io/github/mujohn26/FREE-MENTORS?branch=develop)  [![Maintainability](https://api.codeclimate.com/v1/badges/0c61556454388c5d12c4/maintainability)](https://codeclimate.com/github/mujohn26/FREE-MENTORS/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/mujohn26/FREE-MENTORS-FRONTEND/badge.svg?branch=develop)](https://coveralls.io/github/mujohn26/FREE-MENTORS-FRONTEND?branch=develop) [![Maintainability](https://api.codeclimate.com/v1/badges/62319ae3e1b9cbe36e2c/maintainability)](https://codeclimate.com/github/mujohn26/FREE-MENTORS-FRONTEND/maintainability)
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
@@ -17,6 +17,9 @@ The project is composed of two different parts:
 * API Endpoints
    * Node JS
    * Postman (For testing api locally)
+* Frontend 
+   * React js
+   * Redux
   
 ### Cloning the project
 
