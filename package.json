@@ -4,7 +4,8 @@
   "description": "free-mentors",
   "main": "webpack.common.js",
   "scripts": {
-    "start": "webpack-dev-server  --config webpack.dev.js --open",
+    "dev": "webpack-dev-server  --config webpack.dev.js --open",
+    "start": "node server.js",
     "build": "webpack --config webpack.prod.js",
     "lint": "eslint --fix ./src",
     "test": "jest --updateSnapshot --watch --config jest.config.js",
@@ -65,6 +66,7 @@
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.4",
     "expect": "^25.1.0",
+    "express": "^4.17.1",
     "fs": "0.0.1-security",
     "history": "^4.10.1",
     "jest": "^25.1.0",

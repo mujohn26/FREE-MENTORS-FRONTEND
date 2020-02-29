@@ -1,9 +1,6 @@
 
 
 const LoginReducer =(state={},action)=>{      
-console.log('reducern type:',action.type);
-
-          
     switch (action.type) {
        case 'LOGIN': 
        return{
