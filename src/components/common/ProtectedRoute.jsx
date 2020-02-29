@@ -13,7 +13,6 @@ export const PrivateRoute = ({ component: Component, ...rest }) => {
       if(data.token) {
          localStorage.setItem('token', data.token);
       }
-      console.log('sdhsdhsdf',localStorage.getItem('token'));
       return localStorage.getItem('token');
    }
    const history = createBrowserHistory({

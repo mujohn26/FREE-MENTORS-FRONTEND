@@ -6,7 +6,9 @@
   "scripts": {
     "start": "webpack-dev-server  --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint --fix ./src"
+    "lint": "eslint --fix ./src",
+    "test": "jest --updateSnapshot --watch --config jest.config.js",
+    "test:ci": "jest --updateSnapshot --no-cache --maxWorkers=2 --config jest.config.js --coverage -u"
   },
   "repository": {
     "type": "git",
@@ -53,16 +55,33 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@material-ui/core": "^4.9.0",
     "@material-ui/icons": "^4.5.1",
+    "@material-ui/lab": "^4.0.0-alpha.45",
+    "axios": "^0.19.2",
     "clean-webpack-plugin": "^2.0.0",
+    "coveralls": "^3.0.9",
     "dotenv": "^8.2.0",
     "dotenv-webpack": "^1.7.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "enzyme-to-json": "^3.4.4",
+    "expect": "^25.1.0",
     "fs": "0.0.1-security",
     "history": "^4.10.1",
+    "jest": "^25.1.0",
+    "jest-canvas-mock": "^2.2.0",
+    "jest-localstorage-mock": "^2.4.0",
+    "jest-transform-stub": "^2.0.0",
     "jsonwebtoken": "^8.5.1",
+    "jwt-decode": "^2.2.0",
+    "moxios": "^0.4.0",
     "protected-route": "^1.0.2",
     "query-string": "^6.11.0",
     "react": "^16.12.0",
     "react-dom": "^16.13.0",
-    "react-router-dom": "^5.1.2"
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "redux": "^4.0.5",
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.3.0"
   }
 }

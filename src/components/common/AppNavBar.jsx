@@ -26,13 +26,11 @@ export default function AppNavBar() {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton> */}
           <Typography variant="h6" className={classes.title}>
            FREE MENTORS
           </Typography>
           <Button color="inherit">Sign up</Button>
+          
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
