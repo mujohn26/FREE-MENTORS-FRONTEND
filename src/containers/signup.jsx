@@ -72,7 +72,11 @@ handleChange(event){
 <Paper elevation={0}  className={classes.paper}>
 <Grid container spacing={3}>
         <Grid item xs={9}>
-
+        <img
+						src='https://res.cloudinary.com/dsuepw053/image/upload/v1583093794/mentor2_mflwkn.jpg'
+						width='100%'
+						height='100%'
+					/>
         </Grid>
         <Grid item xs>
   <Card className={classes.Card}>
