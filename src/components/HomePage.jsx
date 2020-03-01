@@ -6,6 +6,7 @@ import {
     Redirect
   } from "react-router-dom";
   import LoginPage from '../containers/Login.jsx';
+  import SignupPage from '../containers/signup.jsx';
 
 class Welcome extends Component {
     render() {
@@ -16,7 +17,9 @@ class Welcome extends Component {
 							<Redirect to='/auth/login' />
 						</Route>
               <Route path='/auth/login' component={LoginPage} /> 
+              <Route path='/auth/signup' component={SignupPage} /> 
             </Switch>
+
 
           </Router>
         );

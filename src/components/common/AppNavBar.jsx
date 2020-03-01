@@ -4,9 +4,10 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
-
+import {createBrowserHistory} from 'history';
+export const history=createBrowserHistory({
+  forceRefresh:true
+})
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
@@ -21,7 +22,12 @@ const useStyles = makeStyles(theme => ({
 
 export default function AppNavBar() {
   const classes = useStyles();
-
+const signup=()=>{
+  history.push('/auth/signup');
+}
+const signin=()=>{
+  history.push('/auth/login');
+}
   return (
     <div className={classes.root}>
       <AppBar position="static">
@@ -29,9 +35,9 @@ export default function AppNavBar() {
           <Typography variant="h6" className={classes.title}>
            FREE MENTORS
           </Typography>
-          <Button color="inherit">Sign up</Button>
+          <Button color="inherit" onClick={signup}>Sign up</Button>
           
-          <Button color="inherit">Login</Button>
+          <Button color="inherit" onClick={signin}>Login</Button>
         </Toolbar>
       </AppBar>
     </div>
