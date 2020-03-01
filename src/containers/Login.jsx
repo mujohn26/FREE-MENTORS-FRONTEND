@@ -18,6 +18,7 @@ import {loginUser, loginSuccess,deleteError} from '../actions/LoginAction';
 import {createBrowserHistory} from 'history';
 import Alert from '@material-ui/lab/Alert';
 import CircularProgress from '@material-ui/core/CircularProgress';
+import Hidden from '@material-ui/core/Hidden';
 
 export const history=createBrowserHistory({
     forceRefresh:true
@@ -65,9 +66,18 @@ handleChange(event){
 
 <Paper elevation={0}  className={classes.paper}>
 <Grid container spacing={3}>
+<Hidden mdDown>
         <Grid item xs={9}>
 
+        <img
+						src='https://res.cloudinary.com/dsuepw053/image/upload/v1583093794/mentor2_mflwkn.jpg'
+						width='100%'
+						height='110%'
+					/>
+
+
         </Grid>
+        </Hidden>
         <Grid item xs>
   <Card className={classes.Card}>
      <CardHeader className={classes.CardHeader} title="Login to Free mentors" subheader="Please enter your email and password"/><Box m={3} />
@@ -79,13 +89,14 @@ handleChange(event){
       <Link href='#' variant='body2' style={{ textDecoration: 'none', color: '#0094FF' }}>{' '}
 									Forgot password?
 								</Link> <Box m={1} />
+                                Don't have account ?   <Link href='/auth/signup' variant='body2' style={{ textDecoration: 'none', color: '#0094FF' }}>{' '}
+									signup
+								</Link> <Box m={4} />
                                 {this.props.errorMessage? <div><Alert severity="error">Invalid email or Password</Alert><Box m={2} /></div>:''}
         {!this.props.isLoading?<Button className={classes.button} variant="contained" color="primary" onClick={this.handleSubmit.bind(this)} data-test="login-btn">
         Login
       </Button>: <CircularProgress className={classes.loader}  />}<Box m={1} />
-       Don't have account ?   <Link href='/auth/signup' variant='body2' style={{ textDecoration: 'none', color: '#0094FF' }}>{' '}
-									signup
-								</Link> <Box m={4} />
+  
     </form>
      </CardContent>
   </Card>
