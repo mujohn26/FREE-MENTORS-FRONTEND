@@ -78,12 +78,14 @@ handleChange(event){
       <TextField name= 'password' type='password' className={classes.inputField} id='user-input' label="Password" required onChange={this.handleChange.bind(this)} data-test="login-password-field"/><br/><Box m={1} />
       <Link href='#' variant='body2' style={{ textDecoration: 'none', color: '#0094FF' }}>{' '}
 									Forgot password?
-								</Link> <Box m={4} />
+								</Link> <Box m={1} />
                                 {this.props.errorMessage? <div><Alert severity="error">Invalid email or Password</Alert><Box m={2} /></div>:''}
         {!this.props.isLoading?<Button className={classes.button} variant="contained" color="primary" onClick={this.handleSubmit.bind(this)} data-test="login-btn">
         Login
-      </Button>: <CircularProgress className={classes.loader}  />}
-
+      </Button>: <CircularProgress className={classes.loader}  />}<Box m={1} />
+       Don't have account ?   <Link href='/auth/signup' variant='body2' style={{ textDecoration: 'none', color: '#0094FF' }}>{' '}
+									signup
+								</Link> <Box m={4} />
     </form>
      </CardContent>
   </Card>
